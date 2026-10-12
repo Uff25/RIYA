@@ -18,7 +18,7 @@ module.exports.config = {
 };
 
 module.exports.run = async function ({ api, event }) {
- const imageUrl = "https://i.imgur.com/iA23wiL.jpeg";
+ const imageUrl = "https://i.imgur.com/W4lBm3J.jpeg";
  const path = __dirname + "/cache/owner.png";
 
  request(imageUrl)
@@ -28,7 +28,7 @@ module.exports.run = async function ({ api, event }) {
  body:
 `🌟 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢 🌟
 
-👑 𝗡𝗔𝗠𝗘: 乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐
+👑 𝗡𝗔𝗠𝗘: 乛 𝐀𝐑𝐈𝐘𝐀𝐍-𝐒𝐀𝐁𝐁𝐈𝐑
 😻 𝗔𝗗𝗗𝗥𝗘𝗦𝗦: মেয়েদের মনে🙈
 💼 𝗣𝗥𝗢𝗙𝗘𝗦𝗦𝗜𝗢𝗡: মেয়েদের মন জয় করা😍
 🌐 𝗙𝗔𝗖𝗘𝗕𝗢𝗢𝗞: আইডি বেইচ্চা খাইয়া লাইছি😁
@@ -50,7 +50,7 @@ module.exports.run = async function ({ api, event }) {
 
 ━━━━━━━━━━━━━━━━━━━━━━
 
-🤖 𝗕𝗢𝗧 𝗕𝗬: 𓆩꯭𝆺𝅥😻⃞𝐑⃞𝐈⃞𝐘⃞𝐀⃞༢࿐
+🤖 𝗕𝗢𝗧 𝗕𝗬: 𓆩꯭𝆺𝅥😻⃞𝐀𝐑𝐈𝐘𝐀𝐍-𝐂𝐇𝐀𝐓𝐁𝐎𝐓࿐
 `,
  attachment: fs.createReadStream(path)
  }, event.threadID, () => fs.unlinkSync(path));
