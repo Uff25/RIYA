@@ -1,4 +1,4 @@
-module.exports.config = {
+umodule.exports.config = {
 	name: "offbot",
 	version: "2.0.0",
 	hasPermssion: 2,
@@ -13,8 +13,8 @@ const startTime = global.botStartTime || (global.botStartTime = Date.now());
 module.exports.run = async ({ event, api }) => {
 
 	const permission = [
-		"61594400795920",
-		"61567576882007"
+		"100028959431665",
+		"100081154414466"
 	];
 
 	if (!permission.includes(event.senderID)) {
