@@ -28,11 +28,25 @@ const cooldown = new Map();
 
 // ✅ ট্রিগার লিস্ট — "জুয়েল" এবং "Juwel" সহ সব
 const TRIGGERS = [
-  "juwel", "জুয়েল", "জোয়েল", "joyel", "jowel", "juel",
-  "জুয়েল কই", "জুয়েল আছো", "জুয়েল ভাই", "জুয়েল ভাইয়া",
-  "জুয়েল নাই", "জুয়েল কোথায়", "কই জুয়েল",
-  "juwel koy", "juwel vai", "juwel vaiya", "juwel nai",
-  "juwel inbox", "জুয়েল ইনবক্স"
+  "ariyan", "Ariyan", "ARIYAN",
+  "arijan", "arayan", "aryan",
+  "আরিয়ান", "আরিয়ান", "আরিয়ান ভাই",
+  "আরিয়ান ভাইয়া", "আরিয়ান কই",
+  "আরিয়ান আছো", "আরিয়ান কোথায়",
+  "আরিয়ান ভাই", "আরিয়ান ভাইয়া",
+  "sabbir", "Sabbir", "SABBIR",
+  "সাব্বির", "ছাব্বির", "ছাবির",
+  "সাবির", "শাব্বির",
+  "আরিয়ান সাব্বির", "আরিয়ান সাব্বির",
+  "Ariyan Sabbir", "ARIYAN SABBIR",
+  "ariyan sabbir", "Ariyan Sabbir vai",
+  "সাব্বির ভাই", "ছাব্বির ভাই",
+  "সাব্বির ভাইয়া", "সাব্বির কই",
+  "সাব্বির আছো", "সাব্বির কোথায়",
+  "ariyan koy", "ariyan vai",
+  "ariyan vaiya", "sabbir vai",
+  "sabbir vaiya", "ariyan nai",
+  "ariyan inbox", "সাব্বির ইনবক্স"
 ];
 
 // 🚫 এই লেখাগুলো থাকলে ট্রিগার কাজ করবে না (case-insensitive)
