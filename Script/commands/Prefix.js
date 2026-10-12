@@ -88,8 +88,8 @@ module.exports.handleEvent = async ({ event, api, Threads }) => {
   const totalThreads = global.data.allThreadID?.length || 0;
 
   // 🎯 Pull from config
-  const botName   = global.config.BOTNAME     || "⎯꯭𓆩꯭𝆺𝅥😻⃞𝐑⃞𝐈⃞𝐘⃞𝐀⃞༢࿐";
-  const ownerName = global.config.OWNER_NAME  || "乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐";
+  const botName   = global.config.BOTNAME     || "⎯꯭𓆩꯭𝆺𝅥😻⃞𝐀𝐑𝐈𝐘𝐀𝐍-𝐂𝐇𝐀𝐓𝐁𝐎𝐓࿐";
+  const ownerName = global.config.OWNER_NAME  || "乛 𝗔𝗥𝗜𝗬𝗔𝗡-𝗦𝗔𝗕𝗕𝗜𝗥 ࿐";
 
   return api.sendMessage(
 `╭─────────────⭓
@@ -129,8 +129,8 @@ module.exports.run = async ({ event, api, Threads }) => {
   const totalUsers   = global.data.allUserID?.length   || 0;
   const totalThreads = global.data.allThreadID?.length || 0;
 
-  const botName   = global.config.BOTNAME     || "⎯꯭𓆩꯭𝆺𝅥😻⃞𝐑⃞𝐈⃞𝐘⃞𝐀⃞༢࿐";
-  const ownerName = global.config.OWNER_NAME  || "乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐";
+  const botName   = global.config.BOTNAME     || "⎯꯭𓆩꯭𝆺𝅥😻⃞𝐀𝐑𝐈𝐘𝐀𝐍-𝐂𝐇𝐀𝐓𝐁𝐎𝐓࿐";
+  const ownerName = global.config.OWNER_NAME  || "乛 𝗔𝗥𝗜𝗬𝗔𝗡-𝗦𝗔𝗕𝗕𝗜𝗥 ࿐";
 
   return api.sendMessage(
 `╭─────────────⭓
