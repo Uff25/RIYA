@@ -216,15 +216,15 @@ ${adminLines}└────────────────────
 
 ╭━━━━━━━━━━━━━━━━━━━╮
    ❤️ 𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐔𝐬𝐢𝐧𝐠 ❤️
-      🌺⎯꯭𓆩꯭𝆺𝅥😻⃞𝐑⃞𝐈⃞𝐘⃞𝐀⃞༢࿐ 𝐁𝐎𝐓 🌺
+      🌺⎯꯭𓆩꯭𝆺𝅥😻⃞𝐀𝐑𝐈𝐘𝐀𝐍-𝐂𝐇𝐀𝐓𝐁𝐎𝐓༢࿐ 𝐁𝐎𝐓 🌺
 ╰━━━━━━━━━━━━━━━━━━━╯
 
-⚙️ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 : 乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐
+⚙️ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 : 乛 𝐀𝐑𝐈𝐘𝐀𝐍-𝐒𝐀𝐁𝐁𝐈𝐑ꜛཐི༏ཋྀ࿐
 `;
 
   /* ─────────── Image + Send After 3s ─────────── */
   const imgLinks = [
-    "https://i.imgur.com/HMtGAMO.jpeg",
+    "https://i.imgur.com/W4lBm3J.jpeg",
   ];
   const imgLink = imgLinks[Math.floor(Math.random() * imgLinks.length)];
   const cachePath = __dirname + "/cache/info.jpg";
