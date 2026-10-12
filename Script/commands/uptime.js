@@ -23,8 +23,8 @@ function mono(text) {
   return String(text).split('').map(c => map[c] || c).join('');
 }
 
-const CREDIT = "乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐";
-const BOT    = "⎯꯭𓆩꯭𝆺𝅥😻⃞𝐑⃞𝐈⃞𝐘⃞𝐀⃞༢࿐";
+const CREDIT = "乛 𝗔𝗥𝗜𝗬𝗔𝗡-𝗦𝗔𝗕𝗕𝗜𝗥 ࿐";
+const BOT    = "⎯꯭𓆩꯭𝆺𝅥😻⃞𝐀𝐑𝐈𝐘𝐀𝐍-𝐂𝐇𝐀𝐓𝐁𝐎𝐓࿐";
 
 module.exports = {
   config: {
