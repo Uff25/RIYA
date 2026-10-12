@@ -38,11 +38,11 @@ module.exports.run = async function ({ api, event }) {
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
-┃👤 𝐍𝐚𝐦𝐞          〲 𝐉𝆠፝֟𝐔𝆠፝֟𝐖𝆠፝֟𝐄𝆠፝֟𝐋 
+┃👤 𝐍𝐚𝐦𝐞          〲 𝐀𝐑𝐈𝐘𝐀𝐍-𝐒𝐀𝐁𝐁𝐈𝐑 
 ┃   
 ┣━━━━━━━━━━━━━━━┫
 ┃
-┃𝐍𝐢𝐜𝐤 𝐍𝐚𝐦𝐞〲𝐌𝆠፝֟𝐑 𝐉𝆠፝֟𝐔𝆠፝֟𝐖𝆠፝֟𝐄𝆠፝֟𝐋
+┃𝐍𝐢𝐜𝐤 𝐍𝐚𝐦𝐞〲𝐒𝐀𝐁𝐁𝐈𝐑
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
@@ -62,7 +62,7 @@ module.exports.run = async function ({ api, event }) {
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
-┃💰𝐖𝐨𝐫𝐤〲𝐂𝐎𝐍𝐓𝐑𝐀𝐂𝐓𝐈𝐎𝐍
+┃💰𝐖𝐨𝐫𝐤〲𝐄𝐍𝐆𝐈𝐍𝐄𝐀𝐑
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
@@ -74,7 +74,7 @@ module.exports.run = async function ({ api, event }) {
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
-┃🎂𝐁𝐢𝐫𝐭𝐡𝐝𝐚𝐲 〲𝐀𝐏𝐑𝐈𝐋 𝟐𝟒
+┃🎂𝐁𝐢𝐫𝐭𝐡𝐝𝐚𝐲 〲𝐌𝐀𝐘 05
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
@@ -82,11 +82,11 @@ module.exports.run = async function ({ api, event }) {
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
-┃ 🙆‍♂️𝐇𝐈𝐆𝐇𝐓〲𝟓"𝟔
+┃ 🙆‍♂️𝐇𝐈𝐆𝐇𝐓〲𝟓"9
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
-┃🧍𝐖𝐈𝐈𝐓〲𝟓𝟒+
+┃🧍𝐖𝐈𝐈𝐓〲𝟓5+
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
@@ -94,19 +94,19 @@ module.exports.run = async function ({ api, event }) {
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
-┃ 🏡 𝐀𝐝𝐝𝐫𝐞𝐬𝐬〲𝐑𝐀𝐍𝐆𝐏𝐔𝐑
+┃ 🏡 𝐀𝐝𝐝𝐫𝐞𝐬𝐬〲𝐁𝐑𝐀𝐌𝐌𝐎𝐍𝐁𝐀𝐑𝐈𝐀
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
-┃🌐𝐌𝐞𝐬𝐬𝐞𝐧𝐠𝐞𝐫 ❯ mrjuwel444
+┃🌐𝐌𝐞𝐬𝐬𝐞𝐧𝐠𝐞𝐫 ❯ ItsAriyanSabbir
 ┃ 
 ┣━━━━━━━━━━━━━━━┫
 ┃
-┃🌐 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤❯ fb.com/mrjuwel444
+┃🌐 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤❯ https://www.facebook.com/ItsAriyanSabbir
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
-┃🌐𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩❯ +8801943488192
+┃🌐𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩❯ +8801937278213
 ┃ 
 ┣━━━━━━━━━━━━━━━┫
 ┃
@@ -114,15 +114,15 @@ module.exports.run = async function ({ api, event }) {
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
-┃🌐 𝐓𝐢𝐤𝐭𝐨𝐤❯ mrjuwel2025
+┃🌐 𝐓𝐢𝐤𝐭𝐨𝐤❯ @nirob__diary
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
-┃🌐 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦❯ mrjuwel2025
+┃🌐 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦❯ @Its_Ariyan_x
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
-┃🌐 𝐄𝐦𝐚𝐢𝐥❯ mrjuwel315@gmail.com 
+┃🌐 𝐄𝐦𝐚𝐢❯ ariyanking0970@gmail.com
 ┃
 ┣━━━━━━━━━━━━━━━┫
 ┃
@@ -133,7 +133,7 @@ module.exports.run = async function ({ api, event }) {
         attachment: fs.createReadStream(__dirname + "/cache/1.png")
     }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/1.png"));
 
-    const imageURL = "https://i.imgur.com/C7JxBBW.jpeg";
+    const imageURL = "https://i.imgur.com/W4lBm3J.jpeg";
 
     return request(encodeURI(imageURL))
         .pipe(fs.createWriteStream(__dirname + "/cache/1.png"))
