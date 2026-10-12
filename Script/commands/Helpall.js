@@ -42,7 +42,7 @@ function getPrefix(threadID) {
 
 // 🔹 আপনার ফটো লিংক এখানে বসান ✅
 const helpImages = [
-  "https://i.imgur.com/HMtGAMO.jpeg",
+  "https://i.imgur.com/W4lBm3J.jpeg",
 ];
 
 function downloadImages(callback) {
@@ -88,8 +88,8 @@ function buildListText(pageInput, prefix) {
 ${msg}
 ╠══════════════════════╣
 ║ ⚙ 𝐏𝐫𝐞𝐟𝐢𝐱 ⇢ ${toBold(displayPrefix)}
-║ 🤖 𝐁𝐨𝐭 ⇢ ${toBold(global.config.BOTNAME || "乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐")}
-║ 👑 𝐎𝐰𝐧𝐞𝐫 ⇢ 乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐
+║ 🤖 𝐁𝐨𝐭 ⇢ ${toBold(global.config.BOTNAME || "乛ARIYAN-CHATBOT")}
+║ 👑 𝐎𝐰𝐧𝐞𝐫 ⇢ 乛 ARIYAN ཐི༏ཋྀ SABBIRꜛཐི༏ཋྀ࿐
 ╠══════════════════════╣
 ║ 💬 𝐑𝐞𝐩𝐥𝐲 𝐰𝐢𝐭𝐡 𝐧𝐮𝐦𝐛𝐞𝐫 ⇢ 𝐄𝐝𝐢𝐭 𝐏𝐚𝐠𝐞
 ║ ⬅ ${toBold("help " + prevPage)} ⇢ 𝐏𝐫𝐞𝐯
