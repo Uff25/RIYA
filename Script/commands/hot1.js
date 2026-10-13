@@ -52,8 +52,7 @@ module.exports = {
       writer.on("finish", () => {
         api.sendMessage(
           {
-            body: `🔥 এই নেও জানু, একদম গরম মাল 🥵
-দেখলেই বের হয়ে যাবে 🫦`,
+            body: `🔥 ইস,শুধু লুচ্চামি করতে মন চায় নাকি সোনা.!🥵 🫦`,
             attachment: fs.createReadStream(path)
           },
           event.threadID,
