@@ -113,7 +113,7 @@ var videoLinks = [
  .pipe(fs.createWriteStream(path))
  .on("close", () => {
  api.sendMessage({
- body: "hot_পাপির দল নে দেখ hot🥵🫦 ভিডিও🫣❯—͟͟͞͞𝐌𝐑 𝐉𝐔𝐖𝐄𝐋",
+ body: "hot_হাতঁ মারবিনা কিন্তু পাপির দল hot🥵🫦 ভিডিও🫣❯—͟͟͞͞𝐀𝐑𝐈𝐘𝐀𝐍-𝐒𝐀𝐁𝐁𝐈𝐑",
  attachment: fs.createReadStream(path)
  }, event.threadID, () => fs.unlinkSync(path));
  });
