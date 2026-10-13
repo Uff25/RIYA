@@ -156,8 +156,8 @@ async function sendCommandInfo(api, event, commandName) {
   const cfg = cmd.config || {};
 
   // Owner / Bot name config থেকে নেওয়ার চেষ্টা
-  let botName = "⎯꯭𓆩꯭𝆺𝅥😻⃞𝐑⃞𝐈⃞𝐘⃞𝐀⃞༢࿐";
-  let ownerName = "乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐";
+  let botName = "⎯꯭𓆩꯭𝆺𝅥😻⃞𝐀𝐑𝐈𝐘𝐀𝐍-𝐂𝐇𝐀𝐓𝐁𝐎𝐓༢࿐";
+  let ownerName = "乛 𝐀𝐑𝐈𝐘𝐀𝐍 ཐི༏ཋྀ 𝐒𝐀𝐁𝐁𝐈𝐑ཐི༏ཋྀ࿐";
   try {
     const configPath = __dirname + "/../../config.json";
     if (fs.existsSync(configPath)) {
@@ -278,7 +278,7 @@ ${commandList}
 `;
 
   const imgPath = __dirname + "/cache/helpallbg.jpg";
-  const bg = "https://i.imgur.com/SHmIpOn.jpeg";
+  const bg = "https://i.imgur.com/W4lBm3J.jpeg";
 
   try {
     const res = await axios({
