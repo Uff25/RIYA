@@ -4,7 +4,7 @@ const fs = require("fs-extra");
 const path = require("path");
 
 module.exports.config = {
-name: "dim",
+name: "anda",
 version: "2.2.2",
 hasPermssion: 0,
 credits: "ARIYAN SABBIR",
