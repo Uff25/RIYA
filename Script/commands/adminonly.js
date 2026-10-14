@@ -1,200 +1,128 @@
-const fs = require("fs-extra");
-const path = require("path");
-
 module.exports.config = {
-	name: "onlyadmin",
-	version: "2.0.0",
-	hasPermssion: 2, // শুধুমাত্র Bot Admin
-	credits: "乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐",
-	description: "Bot Admin Only Mode চালু/বন্ধ করুন",
-	commandCategory: "Admin",
-	usages: "on / off / status",
-	cooldowns: 5,
-	dependencies: {
-		"fs-extra": ""
-	}
+  name: "adminonly",
+  version: "2.0",
+  hasPermssion: 2,
+  credits: "乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐",
+  description: "Admin only mode on/off",
+  commandCategory: "Admin",
+  usages: "adminonly [on | off | status]",
+  cooldowns: 5,
+  dependencies: {
+    "fs-extra": ""
+  }
 };
 
+const fs = require("fs-extra");
+const { resolve } = require("path");
+
+const dataPath = resolve(__dirname, "cache", "data.json");
+
+// IMPORTANT: use require() so we share the SAME cached object that the
+// bot's main handler (handleCommand) reads. We change it in memory
+// (takes effect instantly) and also save it to disk (survives restart).
+function loadData() {
+  fs.ensureDirSync(resolve(__dirname, "cache"));
+  if (!fs.existsSync(dataPath)) {
+    fs.writeFileSync(dataPath, JSON.stringify({ adminbox: {} }, null, 4), "utf8");
+  }
+  let data;
+  try {
+    data = require(dataPath);
+  } catch (e) {
+    fs.writeFileSync(dataPath, JSON.stringify({ adminbox: {} }, null, 4), "utf8");
+    delete require.cache[require.resolve(dataPath)];
+    data = require(dataPath);
+  }
+  if (typeof data.adminbox !== "object" || data.adminbox === null) data.adminbox = {};
+  return data;
+}
+
+function saveData(data) {
+  fs.ensureDirSync(resolve(__dirname, "cache"));
+  fs.writeFileSync(dataPath, JSON.stringify(data, null, 4), "utf8");
+}
+
+const LINE = "━━━━━━━━━━━━━━━━━━━━━━";
+
+function ui(title, status, desc) {
+  return (
+    `╔${LINE}╗\n` +
+    `   ⚙️  𝗔𝗗𝗠𝗜𝗡 𝗢𝗡𝗟𝗬 𝗠𝗢𝗗𝗘\n` +
+    `╚${LINE}╝\n\n` +
+    `${title}\n` +
+    `┏━━━━━━━━━━━━━━━━━━━━┓\n` +
+    `  📌 𝗦𝘁𝗮𝘁𝘂𝘀 : ${status}\n` +
+    `┗━━━━━━━━━━━━━━━━━━━━┛\n\n` +
+    `💬 ${desc}\n\n` +
+    `${LINE}`
+  );
+}
+
 module.exports.onLoad = function () {
-	const filePath = path.join(__dirname, "cache", "data.json");
-
-	if (!fs.existsSync(filePath)) {
-		fs.writeFileSync(
-			filePath,
-			JSON.stringify(
-				{
-					adminbox: {}
-				},
-				null,
-				4
-			)
-		);
-	} else {
-		const data = require(filePath);
-
-		if (!data.adminbox) {
-			data.adminbox = {};
-			fs.writeFileSync(filePath, JSON.stringify(data, null, 4));
-		}
-	}
+  const data = loadData();
+  saveData(data);
 };
 
 module.exports.run = async function ({ api, event, args }) {
-	const { threadID, messageID } = event;
+  const { threadID, messageID } = event;
 
-	const filePath = path.join(__dirname, "cache", "data.json");
+  const data = loadData();
+  const { adminbox } = data;
+  const current = adminbox[threadID] === true;
+  const option = (args[0] || "").toLowerCase();
 
-	delete require.cache[require.resolve(filePath)];
-	const data = require(filePath);
+  // Status only
+  if (option === "status") {
+    return api.sendMessage(
+      ui(
+        "📊 বর্তমান অবস্থা",
+        current ? "🔒 ON" : "🔓 OFF",
+        current
+          ? "এখন শুধু বট অ্যাডমিন বট ব্যবহার করতে পারবে।"
+          : "এখন সবাই বট ব্যবহার করতে পারবে।"
+      ),
+      threadID,
+      messageID
+    );
+  }
 
-	if (!data.adminbox) data.adminbox = {};
+  // Decide new state: on / off / toggle
+  let next;
+  if (option === "on") next = true;
+  else if (option === "off") next = false;
+  else next = !current;
 
-	// STATUS
-	if (args[0] == "status") {
-		return api.sendMessage(
-			{
-				body: data.adminbox[threadID]
-					? `╔═『 🔒 ADMIN ONLY MODE 』══╗
+  adminbox[threadID] = next;
 
-📊 বর্তমান অবস্থা
+  try {
+    saveData(data);
+  } catch (err) {
+    return api.sendMessage(
+      "❌ ডাটা সেভ করতে সমস্যা হয়েছে!\n" + err.message,
+      threadID,
+      messageID
+    );
+  }
 
-✅ Admin Only Mode বর্তমানে চালু রয়েছে।
+  if (next) {
+    return api.sendMessage(
+      ui(
+        "✅ সফলভাবে চালু হয়েছে",
+        "🔒 ON",
+        "Admin Only Mode চালু!\nশুধু বট অ্যাডমিন বট ব্যবহার করতে পারবে।"
+      ),
+      threadID,
+      messageID
+    );
+  }
 
-⚡ কমান্ড ব্যবহার করতে পারবে:
-👑 শুধুমাত্র Bot Admin
-
-❌ Group Admin এবং সাধারণ সদস্যরা বট কমান্ড ব্যবহার করতে পারবে না।
-
-╚════════════════════╝`
-					: `╔═『 🔓 ADMIN ONLY MODE 』══╗
-
-📊 বর্তমান অবস্থা
-
-✅ Admin Only Mode বর্তমানে বন্ধ রয়েছে।
-
-⚡ কমান্ড ব্যবহার করতে পারবে:
-👥 গ্রুপের সকল সদস্য
-
-╚════════════════════╝`
-			},
-			threadID,
-			messageID
-		);
-	}
-
-	// ON
-	if (args[0] == "on") {
-		if (data.adminbox[threadID] === true) {
-			return api.sendMessage(
-				"⚠️ Admin Only Mode আগে থেকেই চালু রয়েছে।",
-				threadID,
-				messageID
-			);
-		}
-
-		data.adminbox[threadID] = true;
-		fs.writeFileSync(filePath, JSON.stringify(data, null, 4));
-
-		return api.sendMessage(
-			{
-				body: `╔═『 🔒 ADMIN ONLY MODE 』══╗
-
-📢 গ্রুপ নোটিশ
-
-এই গ্রুপে Admin Only Mode চালু করা হয়েছে।
-
-✅ এখন থেকে শুধুমাত্র Bot Admin বটের সকল কমান্ড ব্যবহার করতে পারবে।
-
-❌ Group Admin এবং সাধারণ সদস্যরা কোনো বট কমান্ড ব্যবহার করতে পারবে না।
-
-💬 তবে সবাই বটের সাথে সাধারণ কথোপকথন করতে পারবে।
-
-⚠️ নিরাপত্তার স্বার্থে Bot Command System শুধুমাত্র Bot Admin-এর জন্য সীমাবদ্ধ করা হয়েছে।
-
-━━━━━━━━━━━━━━━━━━
-
-👑 SYSTEM OWNER
-乛 𝐀𝐑𝐈𝐘𝐀𝐍-𝐒𝐀𝐁𝐁𝐈𝐑ꜛཐི༏ཋྀ࿐
-
-━━━━━━━━━━━━━━━━━━
-
-🔒 স্ট্যাটাস : চালু
-🛡️ নিরাপত্তা : সর্বোচ্চ
-⚡ ব্যবহারকারী : শুধুমাত্র Bot Admin
-
-╚════════════════════╝`
-			},
-			threadID,
-			messageID
-		);
-	}
-
-	// OFF
-	if (args[0] == "off") {
-		if (!data.adminbox[threadID]) {
-			return api.sendMessage(
-				"⚠️ Admin Only Mode আগে থেকেই বন্ধ রয়েছে।",
-				threadID,
-				messageID
-			);
-		}
-
-		data.adminbox[threadID] = false;
-		fs.writeFileSync(filePath, JSON.stringify(data, null, 4));
-
-		return api.sendMessage(
-			{
-				body: `╔═『 🔓 ADMIN ONLY MODE 』══╗
-
-📢 গ্রুপ নোটিশ
-
-Admin Only Mode সফলভাবে বন্ধ করা হয়েছে।
-
-✅ এখন থেকে গ্রুপের সকল সদস্য বটের সকল কমান্ড ব্যবহার করতে পারবে।
-
-🎉 Bot Command System পুনরায় সবার জন্য চালু করা হয়েছে।
-
-━━━━━━━━━━━━━━━━━━
-
-👑 SYSTEM OWNER
-乛 𝐀𝐑𝐈𝐘𝐀𝐍-𝐒𝐀𝐁𝐁𝐈𝐑ꜛཐི༏ཋྀ࿐
-
-━━━━━━━━━━━━━━━━━━
-
-🔓 স্ট্যাটাস : বন্ধ
-🌐 ব্যবহারকারী : সকল সদস্য
-
-╚════════════════════╝`
-			},
-			threadID,
-			messageID
-		);
-	}
-
-	// HELP
-	return api.sendMessage(
-		{
-			body: `╔═『 ⚙️ ONLYADMIN HELP 』══╗
-
-📌 কমান্ড ব্যবহার:
-
-🔒 onlyadmin on
-➜ Admin Only Mode চালু করবে
-
-🔓 onlyadmin off
-➜ Admin Only Mode বন্ধ করবে
-
-📊 onlyadmin status
-➜ বর্তমান স্ট্যাটাস দেখাবে
-
-━━━━━━━━━━━━━━━━━━
-
-⚡ Mode চালু থাকলে:
-👑 শুধুমাত্র Bot Admin বট কমান্ড ব্যবহার করতে পারবে।
-
-╚════════════════════╝`
-		},
-		threadID,
-		messageID
-	);
+  return api.sendMessage(
+    ui(
+      "✅ সফলভাবে বন্ধ হয়েছে",
+      "🔓 OFF",
+      "Admin Only Mode বন্ধ!\nএখন সবাই বট ব্যবহার করতে পারবে।"
+    ),
+    threadID,
+    messageID
+  );
 };
