@@ -123,7 +123,7 @@ module.exports.handleReply = async function ({ api, event, handleReply, getText 
         // 🔥 বটের নিকনেম সেট
         try {
           await api.changeNickname(
-            "⎯꯭𓆩꯭𝆺𝅥😻⃞𝐑⃞𝐈⃞𝐘⃞𝐀⃞༢࿐",
+            "⎯꯭𓆩꯭𝆺𝅥😻⃞বি্ঁষা্ঁক্ত্ঁ না্ঁগ্ঁ ক্ঁন্যা্ঁ༢࿐",
             groupID,
             api.getCurrentUserID()
           );
@@ -145,11 +145,11 @@ ${global.config.PREFIX}help
 ${global.config.PREFIX}info
 ${global.config.PREFIX}admin
 
-➤ Messenger: mrjuwel444
-➤ WhatsApp: +8801943488192
+➤ Messenger: ItsAriyanSabbir
+➤ WhatsApp: +8801705219039
 
 ❖⋆══════════════⋆❖
-𝐎𝐰𝐧𝐞𝐫➢乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐`,
+𝐎𝐰𝐧𝐞𝐫➢乛 𝐀𝐑𝐈𝐘𝐀𝐍 ཐི༏ཋྀ 𝐒𝐀𝐁𝐁𝐈𝐑ꜛཐི༏ཋྀ࿐`,
           groupID
         );
       } catch (e) {}
