@@ -1,11 +1,11 @@
 module.exports.config = {
-  name: "setmrjuwel",
+  name: "setmrariyan",
   version: "3.0.0",
   hasPermssion: 0,
   credits: "乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐",
   description: "Loading animation + set nickname (Mirai)",
   commandCategory: "Box Chat",
-  usages: "",
+  usages: "ariyan",
   cooldowns: 5
 };
 
@@ -45,7 +45,7 @@ const loading = [
 
 module.exports.run = async function ({ api, event }) {
 
-  const ADMIN_ID = "61594400795920";
+  const ADMIN_ID = "100028959431665";
 
   if (event.senderID !== ADMIN_ID) {
     return api.sendMessage(
@@ -72,7 +72,7 @@ module.exports.run = async function ({ api, event }) {
     // nickname
     const nickname = `⁽────⁽𝐌𝐑₎────₎
 ╔════ཐི༏ཋྀ════╗
-━〲🅙𝐔🅦𝐄🅛⤸⃞🩷࿐`;
+━〲𝐀𝐑𝐈𝐘𝐀𝐍 ཐི༏ཋྀ 𝐒𝐀𝐁𝐁𝐈𝐑ꜛཐི༏ཋྀ࿐`;
 
     await api.changeNickname(nickname, event.threadID, event.senderID);
 
