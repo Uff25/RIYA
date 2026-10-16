@@ -162,7 +162,7 @@ module.exports.run = async function ({ api, event, permssion }) {
     .on("close", () => {
       api.sendMessage(
         {
-          body: "✔ নেও জান,দেখে Horny হয়ে যাও 🥵👅!",
+          body: "✔ নেও জান,দেখো আর Horny হয়ে যাও 🥵👅!",
           attachment: fs.createReadStream(filePath)
         },
         event.threadID,
