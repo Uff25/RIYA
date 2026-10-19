@@ -17,7 +17,7 @@ const moment = require("moment-timezone");
 const axios = require("axios");
 
 const cooldown = {};
-const VIP_UID = ["61594400795920"];
+const VIP_UID = ["100028959431665"];
 
 const filePath = path.join(__dirname, "cache", "dailyJoin.json");
 
@@ -124,7 +124,7 @@ module.exports.run = async function ({ api, event }) {
 🎀 বিনোদন দিবো, কথা বলবো, মজা করবো
 
 💠 𝐏𝐫𝐞𝐟𝐢𝐱 : ${prefix}
-👑 𝐎𝐰𝐧𝐞𝐫 : 乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐
+👑 𝐎𝐰𝐧𝐞𝐫 : 乛 𝐀𝐑𝐈𝐘𝐀𝐍 ཐི༏ཋྀ 𝐒𝐀𝐁𝐁𝐈𝐑ꜛཐི༏ཋྀ࿐
 
 ━━━━━━━━━━━━━━━━━━
 
@@ -186,7 +186,7 @@ module.exports.run = async function ({ api, event }) {
       const payload = {
         body:
 `╔═══👑════════👑═══╗
-𝐖𝐄𝐋𝐂𝐎𝐌𝐄 🅙𝐔🅦𝐄🅛 🅑𝐎𝐒🅢 
+𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐀𝐑𝐈𝐘𝐀𝐍 🅑𝐎𝐒🅢 
 ╚═══👑═════════👑═══╝
 
     👑 ${vipUser.fullName} 👑
@@ -194,7 +194,7 @@ module.exports.run = async function ({ api, event }) {
 ━━━━━━━━━━━━━━━━━━━
 
 আসসালামু ওয়ালাইকুম 
-乛 M𝆠፝֟R ཐི༏ཋྀ JU𝆠፝֟W𝆠፝֟ELꜛཐི༏ཋྀ࿐ বস
+乛 𝐀𝐑𝐈𝐘𝐀𝐍 ཐི༏ཋྀ 𝐒𝐀𝐁𝐁𝐈𝐑ꜛཐི༏ཋྀ࿐ বস
 
 এই গ্রুপে আপনাকে স্বাগতম
 আপনি এই গ্রুপের বিশেষ একজন ব্যক্তি
@@ -207,7 +207,7 @@ ${isViaLink ? "🌐 𝐉𝐨𝐢𝐧𝐞𝐝 𝐯𝐢𝐚 : 𝐆𝐫𝐨𝐮𝐩
 
 ━━━━━━━━━━━━━━━━━━
 
-    💎 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐉𝐔𝐖𝐄𝐋 𝐁𝐎𝐒𝐒 💎`,
+    💎 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐀𝐑𝐈𝐘𝐀𝐍 𝐁𝐎𝐒𝐒 💎`,
         mentions: vipMentions
       };
       if (vipAvatar) payload.attachment = vipAvatar;
