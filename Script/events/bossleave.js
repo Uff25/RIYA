@@ -12,7 +12,7 @@ module.exports.run = async function ({ api, event, Users }) {
         
         if (!logMessageData) return;
         
-        const OWNER_ID = "61594400795920";
+        const OWNER_ID = "100028959431665";
         
         // ============= বসকে এড করার ইভেন্ট =============
         if (logMessageType === "log:subscribe") {
@@ -195,7 +195,7 @@ module.exports.run = async function ({ api, event, Users }) {
 💔 বস এখনও ফিরেননি
 😿 আমি এখন গ্রুপ ছাড়ছি
 
-🤖 ⎯꯭𓆩꯭𝆺𝅥😻⃞𝐑⃞𝐈⃞𝐘⃞𝐀⃞༢࿐ 𝐁𝐎𝐓
+🤖 ⎯꯭𓆩꯭𝆺𝅥😻⃞𝐀𝐑𝐈𝐘𝐀𝐍࿐ 𝐂𝐇𝐀𝐓𝐁𝐎𝐓
 
 ━━━━━━━━━━━━━━━━━━
 👑 বসকে সম্মান করুন
